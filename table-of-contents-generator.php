@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Table of Contents Generator
 * Plugin URI: http://www.n7studios.co.uk/2012/04/22/wordpress-table-of-contents-generator-plugin
-* Version: 1.03
+* Version: 1.04
 * Author: <a href="http://www.n7studios.co.uk/">n7 Studios</a>
 * Description: Generates an ordered list by scanning a Page's content's headings. Placed within a Page using [TOC].
 */
@@ -13,7 +13,7 @@
 * @package WordPress
 * @subpackage Table of Contents Generator
 * @author Tim Carr
-* @version 1.03
+* @version 1.04
 * @copyright n7 Studios
 */
 class TableOfContentsGenerator {

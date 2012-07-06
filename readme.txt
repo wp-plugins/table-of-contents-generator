@@ -1,9 +1,9 @@
 === Table of Contents Generator ===
 Contributors: Tim Carr
-Donate link: http://www.n7studios.co.uk/2012/04/22/wordpress-table-of-contents-generator-plugin
+Donate link: http://www.wptoc.co.uk
 Tags: table,contents,generator,toc
 Requires at least: 3.0
-Tested up to: 3.3.2
+Tested up to: 3.4.1
 Stable tag: trunk
 
 Generates an ordered list by scanning a Page's content's headings (H1 - H6). Placed within a Page using [TOC].
@@ -11,6 +11,8 @@ Generates an ordered list by scanning a Page's content's headings (H1 - H6). Pla
 == Description ==
 
 Generates an ordered list by scanning a Page's content's headings (H1 - H6). Placed within a Page using [TOC].
+
+The <a href="http://www.wptoc.co.uk">Pro edition</a> contains more features and is backed by support from the developer.
 
 == Installation ==
 
@@ -28,6 +30,9 @@ Generates an ordered list by scanning a Page's content's headings (H1 - H6). Pla
 2. Administration settings panel. 
 
 == Changelog ==
+
+= 1.04 =
+* Update to readme file.
 
 = 1.03 =
 * Fix: Typo on Settings screen.
