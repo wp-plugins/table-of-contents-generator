@@ -29,6 +29,9 @@ Generates an ordered list by scanning a Page's content's headings (H1 - H6). Pla
 
 == Changelog ==
 
+= 1.03 =
+* Fix: Typo on Settings screen.
+
 = 1.02 =
 * Fix: Changes for 3.4.1 compatibility.
 
