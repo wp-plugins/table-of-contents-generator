@@ -1,10 +1,12 @@
 === Table of Contents Generator ===
-Contributors: Tim Carr
-Donate link: http://www.wptoc.co.uk
+Contributors: n7studios,wpcube
+Donate link: http://www.wpcube.co.uk/plugins/table-of-contents-generator-pro
 Tags: table,contents,generator,toc
-Requires at least: 3.0
-Tested up to: 3.4.1
+Requires at least: 3.6
+Tested up to: 3.7
 Stable tag: trunk
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Generates an ordered list by scanning a Page's content's headings (H1 - H6). Placed within a Page using [TOC].
 
@@ -12,17 +14,40 @@ Generates an ordered list by scanning a Page's content's headings (H1 - H6). Pla
 
 Generates an ordered list by scanning a Page's content's headings (H1 - H6). Placed within a Page using [TOC].
 
-The <a href="http://www.wptoc.co.uk">Pro edition</a> contains more features and is backed by support from the developer.
+= Support =
+
+*Premium Plugins*
+
+This plugin is available in a Pro version, which contains more features and backed by one to one email support:
+
+= <a href="http://www.wpcube.co.uk/plugins/table-of-contents-generator-pro">Get Pro Version</a> =
+
+*Free Plugins*
+
+We will do our best to provide support through the WordPress forums. However, please understand that this is a free plugin, 
+so support will be limited. Please read this article on <a href="http://www.wpbeginner.com/beginners-guide/how-to-properly-ask-for-wordpress-support-and-get-it/">how to properly ask for WordPress support and get it</a>.
+
+= WP Cube =
+We produce free and premium WordPress Plugins that supercharge your site, by increasing user engagement, boost site visitor numbers
+and keep your WordPress web sites secure.
+
+Find out more about us:
+
+* <a href="http://www.wpcube.co.uk">Our Plugins</a>
+* <a href="http://www.facebook.com/wpcube">Facebook</a>
+* <a href="http://twitter.com/wp_cube">Twitter</a>
+* <a href="https://plus.google.com/b/110192203343779769233/110192203343779769233/posts?rel=author">Google+</a>
 
 == Installation ==
 
-1. Download the Table of Contents Generator Plugin.
-2. In your WordPress Administration, go to Plugins > Add New > Upload, and select the plugin ZIP file.
-3. Activate the plugin
-4. Insert the shortcode [TOC], or click the Insert Table of Contents button in the TinyMCE editor to add a table of contents to your content.
+1. Upload the `table-of-contents-generator` folder to the `/wp-content/plugins/` directory
+2. Active the Table of Contents Generator plugin through the 'Plugins' menu in WordPress
+3. Configure the plugin by going to the `Table of Contents Generator` menu that appears in your admin menu
 
 == Frequently Asked Questions ==
 
+How do I add a Table of Contents to my Page?
+Add the [TOC] shortcode, or click the Table of Contents Generator button in the Visual Editor toolbar.
 
 == Screenshots ==
 
@@ -30,6 +55,10 @@ The <a href="http://www.wptoc.co.uk">Pro edition</a> contains more features and 
 2. Administration settings panel. 
 
 == Changelog ==
+
+= 1.5 =
+* Fix: Correct version numbering
+* Fix: PHP warning messages
 
 = 1.04 =
 * Update to readme file.
