@@ -56,6 +56,9 @@ Add the [TOC] shortcode, or click the Table of Contents Generator button in the 
 
 == Changelog ==
 
+= 1.5.1 =
+* Dashboard CSS + JS enhancements
+
 = 1.5 =
 * Fix: Correct version numbering
 * Fix: PHP warning messages

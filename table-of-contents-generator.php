@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Table of Contents Generator
 * Plugin URI: http://www.wpcube.co.uk/plugins/table-of-contents-generator-pro
-* Version: 1.5
+* Version: 1.5.1
 * Author: WP Cube
 * Author URI: http://www.wpcube.co.uk
 * Description: Generates an ordered list by scanning a Page's content's headings. Placed within a Page using [TOC].
@@ -31,7 +31,7 @@
 * @package WP Cube
 * @subpackage Table of Contents Generator
 * @author Tim Carr
-* @version 1.5
+* @version 1.5.1
 * @copyright WP Cube
 */
 class TOCGenerator {
@@ -43,7 +43,7 @@ class TOCGenerator {
         $this->plugin = new stdClass;
         $this->plugin->name = 'table-of-contents-generator'; // Plugin Folder
         $this->plugin->displayName = 'Table of Contents Generator'; // Plugin Name
-        $this->plugin->version = 1.5;
+        $this->plugin->version = '1.5.1';
         $this->plugin->folder = WP_PLUGIN_DIR.'/'.$this->plugin->name; // Full Path to Plugin Folder
         $this->plugin->url = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
         $this->plugin->upgradeReasons = array(
@@ -52,10 +52,6 @@ class TOCGenerator {
         	array(__('Expandable TOC'), __('Allow site visitors to show / hide your table of contents.')),
         	array(__('Exclude Headings from TOC'), __('Choose to exclude specific heading tags (H1, H2 etc) from the Table of Contents listings.')),
         	array(__('Back to Top'), __('Choose to display a Back to Top anchor below each heading.')),
-        	array(__('Support'), __('Access to support ticket system and knowledgebase')),
-        	array(__('Documentation'), __('Detailed documentation on how to install and configure the plugin.')),
-        	array(__('Updates'), __('Receive one click update notifications, right within your WordPress Adminstration panel.')),
-        	array(__('Seamless Upgrade'), __('Retain all current settings when upgrading to Pro.')),
         );
         $this->plugin->upgradeURL = 'http://www.wpcube.co.uk/plugins/table-of-contents-generator-pro';
         
