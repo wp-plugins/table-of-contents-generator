@@ -56,6 +56,9 @@ Add the [TOC] shortcode, or click the Table of Contents Generator button in the 
 
 == Changelog ==
 
+= 1.5.2 =
+* Added classes to each TOC list item to denote which heading it is (heading-1, heading-2 etc)
+
 = 1.5.1 =
 * Dashboard CSS + JS enhancements
 

@@ -167,7 +167,7 @@ class TOCGenerator {
     */
     function replaceHeadings($match) {
     	if ($match[3] == '<!--nextpage-->') return $match[0]; // Skip nextpage  	
-    	$tocID = $this->generateUniqueTOCID($match[3]);
+    	$tocID = $this->generateUniqueTOCID($match[3], $match[1]);
     	return '<h'.$match[1].' id="'.$tocID.'"'.$match[2].'>'.$match[3].'</h'.$match[1].'>';
     }
     
@@ -175,9 +175,10 @@ class TOCGenerator {
     * Generates a unique table of contents heading ID
     *
     * @param string $heading Heading Text
+    * @param int $headingType Heading Type (1,2,3,4,5,6)
     * @return string Unique Heading ID
     */
-    function generateUniqueTOCID($heading) {
+    function generateUniqueTOCID($heading, $headingType) {
         // Make heading name ID safe / compatible
         $newHeading = preg_replace('|%([a-fA-F0-9][a-fA-F0-9])|', '', sanitize_title_with_dashes($heading));
         
@@ -191,7 +192,11 @@ class TOCGenerator {
         
         // We now have a unique heading ID
         $newHeading = 'toc-'.$newHeading;
-        $this->headings[$newHeading] = strip_tags($heading); // Removes anchor and other tags that might be within the header.
+        $this->headings[$newHeading] = array(
+        	'type' => $headingType,
+        	'title' => strip_tags($heading),
+        ); // Removes anchor and other tags that might be within the header.
+        
         return $newHeading;
     }
     
@@ -204,9 +209,11 @@ class TOCGenerator {
     function buildTOC() {
     	if (!$this->headings OR !is_array($this->headings)) return ''; // No headings, so no TOC HTML required
     	
+    	$count = 0;
     	$html = '<ol class="toc-generator">';
     	foreach ($this->headings as $key=>$heading) {
-    		$html .= '<li><a href="#'.$key.'" title="Jump to '.$heading.'">'.$heading.'</a></li>';
+    		$html .= '<li class="heading-'.$heading['type'].(($count == 0) ? ' selected' : '').'"><a href="#'.$key.'" title="Jump to '.$heading['title'].'">'.$heading['title'].'</a></li>';
+    		$count++;
     	}
     	$html .= '</ol>';
     	

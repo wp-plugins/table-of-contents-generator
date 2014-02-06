@@ -3,7 +3,8 @@ jQuery(document).ready(function($) {
 	* Fade out Plugin error + message divs
 	*/
 	setTimeout(function() {
-		$('div.fade').fadeOut();
+		$('div.error.fade').fadeOut();
+		$('div.updated.fade').fadeOut();
 	}, 3000);
 	
 	/**
@@ -19,7 +20,7 @@ jQuery(document).ready(function($) {
 		});
 		
 		// Hide all panels except the active one
-		$('#normal-sortables div.postbox').hide();
+		$('#normal-sortables div.panel').hide();
 		var activeTab = $('h2.nav-tab-wrapper a.nav-tab-active').attr('href')+'-panel';
 		$(activeTab).show();
 		
@@ -29,7 +30,7 @@ jQuery(document).ready(function($) {
 			
 			// Deactivate all tabs, hide all panels
 			$('h2.nav-tab-wrapper a').removeClass('nav-tab-active');
-			$('#normal-sortables div.postbox').hide();
+			$('#normal-sortables div.panel').hide();
 			
 			// Set clicked tab to active, show panel
 			$(this).addClass('nav-tab-active');
