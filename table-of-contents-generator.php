@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Table of Contents Generator
 * Plugin URI: http://www.wpcube.co.uk/plugins/table-of-contents-generator-pro
-* Version: 1.5.1
+* Version: 1.5.2
 * Author: WP Cube
 * Author URI: http://www.wpcube.co.uk
 * Description: Generates an ordered list by scanning a Page's content's headings. Placed within a Page using [TOC].
@@ -31,7 +31,7 @@
 * @package WP Cube
 * @subpackage Table of Contents Generator
 * @author Tim Carr
-* @version 1.5.1
+* @version 1.5.2
 * @copyright WP Cube
 */
 class TOCGenerator {
@@ -43,7 +43,7 @@ class TOCGenerator {
         $this->plugin = new stdClass;
         $this->plugin->name = 'table-of-contents-generator'; // Plugin Folder
         $this->plugin->displayName = 'Table of Contents Generator'; // Plugin Name
-        $this->plugin->version = '1.5.1';
+        $this->plugin->version = '1.5.2';
         $this->plugin->folder = WP_PLUGIN_DIR.'/'.$this->plugin->name; // Full Path to Plugin Folder
         $this->plugin->url = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
         $this->plugin->upgradeReasons = array(
@@ -64,6 +64,8 @@ class TOCGenerator {
 		// Hooks
         add_action('admin_enqueue_scripts', array(&$this, 'adminScriptsAndCSS'));
         add_action('admin_menu', array(&$this, 'adminPanelsAndMetaBoxes'));
+        add_action('plugins_loaded', array(&$this, 'loadLanguageFiles'));
+        
         if (is_admin()) {
         	add_action('init', array(&$this, 'setupTinyMCEPlugins'));
         } else {
@@ -106,6 +108,13 @@ class TOCGenerator {
 		// Load Settings Form
         include_once(WP_PLUGIN_DIR.'/'.$this->plugin->name.'/views/settings.php');  
     }
+    
+    /**
+	* Loads plugin textdomain
+	*/
+	function loadLanguageFiles() {
+		load_plugin_textdomain($this->plugin->name, false, $this->plugin->name.'/languages/');
+	}
     
     /**
     * Setup calls to add a button and plugin to the TinyMCE Rich Text Editors, except on the plugin's
