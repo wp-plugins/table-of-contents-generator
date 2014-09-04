@@ -3,7 +3,7 @@ Contributors: n7studios,wpcube
 Donate link: http://www.wpcube.co.uk/plugins/table-of-contents-generator-pro
 Tags: table,contents,generator,toc
 Requires at least: 3.6
-Tested up to: 3.8.1
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -55,6 +55,12 @@ Add the [TOC] shortcode, or click the Table of Contents Generator button in the 
 2. Administration settings panel. 
 
 == Changelog ==
+
+= 1.5.3 =
+* Fix: Dashboard errors
+* Fix: Changed Menu Icon
+* Fix: WordPress 4.0 compatibility
+* Fix: Enable / Disable CSS
 
 = 1.5.2 =
 * Added classes to each TOC list item to denote which heading it is (heading-1, heading-2 etc)

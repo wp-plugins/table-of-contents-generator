@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Table of Contents Generator
 * Plugin URI: http://www.wpcube.co.uk/plugins/table-of-contents-generator-pro
-* Version: 1.5.2
+* Version: 1.5.3
 * Author: WP Cube
 * Author URI: http://www.wpcube.co.uk
 * Description: Generates an ordered list by scanning a Page's content's headings. Placed within a Page using [TOC].
@@ -31,7 +31,7 @@
 * @package WP Cube
 * @subpackage Table of Contents Generator
 * @author Tim Carr
-* @version 1.5.2
+* @version 1.5.3
 * @copyright WP Cube
 */
 class TOCGenerator {
@@ -43,7 +43,7 @@ class TOCGenerator {
         $this->plugin = new stdClass;
         $this->plugin->name = 'table-of-contents-generator'; // Plugin Folder
         $this->plugin->displayName = 'Table of Contents Generator'; // Plugin Name
-        $this->plugin->version = '1.5.2';
+        $this->plugin->version = '1.5.3';
         $this->plugin->folder = WP_PLUGIN_DIR.'/'.$this->plugin->name; // Full Path to Plugin Folder
         $this->plugin->url = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
         $this->plugin->upgradeReasons = array(
@@ -62,7 +62,6 @@ class TOCGenerator {
 		$dashboard = new WPCubeDashboardWidget($this->plugin); 
 		
 		// Hooks
-        add_action('admin_enqueue_scripts', array(&$this, 'adminScriptsAndCSS'));
         add_action('admin_menu', array(&$this, 'adminPanelsAndMetaBoxes'));
         add_action('plugins_loaded', array(&$this, 'loadLanguageFiles'));
         
@@ -75,18 +74,10 @@ class TOCGenerator {
     }
     
     /**
-    * Register and enqueue any JS and CSS for the WordPress Administration
-    */
-    function adminScriptsAndCSS() {
-    	// CSS
-        wp_enqueue_style($this->plugin->name.'-admin', $this->plugin->url.'css/admin.css', array(), $this->plugin->version); 
-    }
-    
-    /**
     * Register the plugin settings panel
     */
     function adminPanelsAndMetaBoxes() {
-        add_menu_page($this->plugin->displayName, $this->plugin->displayName, 'manage_options', $this->plugin->name, array(&$this, 'adminPanel'), $this->plugin->url.'images/icons/small.png');
+        add_menu_page($this->plugin->displayName, $this->plugin->displayName, 'manage_options', $this->plugin->name, array(&$this, 'adminPanel'), 'dashicons-list-view');
     }
     
 	/**
