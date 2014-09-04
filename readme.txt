@@ -60,7 +60,6 @@ Add the [TOC] shortcode, or click the Table of Contents Generator button in the 
 * Fix: Dashboard errors
 * Fix: Changed Menu Icon
 * Fix: WordPress 4.0 compatibility
-* Fix: Enable / Disable CSS
 
 = 1.5.2 =
 * Added classes to each TOC list item to denote which heading it is (heading-1, heading-2 etc)
