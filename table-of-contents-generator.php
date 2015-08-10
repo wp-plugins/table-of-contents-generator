@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Table of Contents Generator
 * Plugin URI: http://www.wpcube.co.uk/plugins/table-of-contents-generator-pro
-* Version: 1.5.2
+* Version: 1.5.4
 * Author: WP Cube
 * Author URI: http://www.wpcube.co.uk
 * Description: Generates an ordered list by scanning a Page's content's headings. Placed within a Page using [TOC].
@@ -31,21 +31,23 @@
 * @package WP Cube
 * @subpackage Table of Contents Generator
 * @author Tim Carr
-* @version 1.5.2
+* @version 1.5.4
 * @copyright WP Cube
 */
 class TOCGenerator {
     /**
     * Constructor.
     */
-    function TOCGenerator() {
+    function __construct() {
+
         // Plugin Details
         $this->plugin = new stdClass;
-        $this->plugin->name = 'table-of-contents-generator'; // Plugin Folder
-        $this->plugin->displayName = 'Table of Contents Generator'; // Plugin Name
-        $this->plugin->version = '1.5.2';
-        $this->plugin->folder = WP_PLUGIN_DIR.'/'.$this->plugin->name; // Full Path to Plugin Folder
-        $this->plugin->url = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
+        $this->plugin->name         = 'table-of-contents-generator'; // Plugin Folder
+        $this->plugin->displayName  = 'Table of Contents Generator'; // Plugin Name
+        $this->plugin->version      = '1.5.4';
+        $this->plugin->folder       = plugin_dir_path( __FILE__ );
+        $this->plugin->url          = plugin_dir_url( __FILE__ );
+
         $this->plugin->upgradeReasons = array(
         	array(__('Site Wide Display Options'), __('Define site wide TOC settings for title, alignment, border, background color, font, font size and font color.')),
         	array(__('Always Display TOC'), __('Choose to have the table of contents static in the top left or right corner of the Page or Post as the user scrolls down.')),
@@ -62,7 +64,6 @@ class TOCGenerator {
 		$dashboard = new WPCubeDashboardWidget($this->plugin); 
 		
 		// Hooks
-        add_action('admin_enqueue_scripts', array(&$this, 'adminScriptsAndCSS'));
         add_action('admin_menu', array(&$this, 'adminPanelsAndMetaBoxes'));
         add_action('plugins_loaded', array(&$this, 'loadLanguageFiles'));
         
@@ -75,18 +76,10 @@ class TOCGenerator {
     }
     
     /**
-    * Register and enqueue any JS and CSS for the WordPress Administration
-    */
-    function adminScriptsAndCSS() {
-    	// CSS
-        wp_enqueue_style($this->plugin->name.'-admin', $this->plugin->url.'css/admin.css', array(), $this->plugin->version); 
-    }
-    
-    /**
     * Register the plugin settings panel
     */
     function adminPanelsAndMetaBoxes() {
-        add_menu_page($this->plugin->displayName, $this->plugin->displayName, 'manage_options', $this->plugin->name, array(&$this, 'adminPanel'), $this->plugin->url.'images/icons/small.png');
+        add_menu_page($this->plugin->displayName, $this->plugin->displayName, 'manage_options', $this->plugin->name, array(&$this, 'adminPanel'), 'dashicons-list-view');
     }
     
 	/**
