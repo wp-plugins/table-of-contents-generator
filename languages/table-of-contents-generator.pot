@@ -1,19 +1,22 @@
-# Copyright (C) 2014 Table of Contents Generator
+# Copyright (C) 2015 Table of Contents Generator
 # This file is distributed under the same license as the Table of Contents Generator package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Table of Contents Generator 1.5.2\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/table-of-contents-generator\n"
-"POT-Creation-Date: 2014-03-01 18:33:49+00:00\n"
+"Project-Id-Version: Table of Contents Generator 1.5.3\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/table-of-contents-"
+"generator\n"
+"POT-Creation-Date: 2015-03-26 11:33:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: _modules/dashboard/views/dashboard-nodata.php:14
-msgid "Thanks for using our plugins - why not check out some of our other amazing Premium WordPress Plugins?"
+msgid ""
+"Thanks for using our plugins - why not check out some of our other amazing "
+"Premium WordPress Plugins?"
 msgstr ""
 
 #: _modules/dashboard/views/dashboard-nodata.php:15
@@ -22,7 +25,9 @@ msgid "Visit WP Cube"
 msgstr ""
 
 #: _modules/dashboard/views/dashboard.php:18
-msgid "Thanks for using our plugins - why not check out some of our other amazing Premium WordPress Plugins below?"
+msgid ""
+"Thanks for using our plugins - why not check out some of our other amazing "
+"Premium WordPress Plugins below?"
 msgstr ""
 
 #: _modules/dashboard/views/dashboard.php:33
@@ -43,7 +48,7 @@ msgstr ""
 
 #: _modules/dashboard/views/footer-upgrade.php:16
 #: _modules/dashboard/views/sidebar-pro.php:23
-#: _modules/dashboard/views/sidebar-pro.php:28
+#: _modules/dashboard/views/sidebar-pro.php:30
 msgid "Support"
 msgstr ""
 
@@ -52,7 +57,7 @@ msgid "Access to one on one email support"
 msgstr ""
 
 #: _modules/dashboard/views/footer-upgrade.php:17
-#: _modules/dashboard/views/sidebar-pro.php:27
+#: _modules/dashboard/views/sidebar-pro.php:28
 msgid "Documentation"
 msgstr ""
 
@@ -65,7 +70,9 @@ msgid "Updates"
 msgstr ""
 
 #: _modules/dashboard/views/footer-upgrade.php:18
-msgid "Receive one click update notifications, right within your WordPress Adminstration panel"
+msgid ""
+"Receive one click update notifications, right within your WordPress "
+"Adminstration panel"
 msgstr ""
 
 #: _modules/dashboard/views/footer-upgrade.php:19
@@ -86,7 +93,9 @@ msgid "About"
 msgstr ""
 
 #: _modules/dashboard/views/sidebar-donate.php:13
-msgid "Found this plugin useful? Donations to help with support and development are appreciated."
+msgid ""
+"Found this plugin useful? Donations to help with support and development are "
+"appreciated."
 msgstr ""
 
 #: _modules/dashboard/views/sidebar-donate.php:30
@@ -100,7 +109,8 @@ msgstr ""
 
 #: _modules/dashboard/views/sidebar-donate.php:43
 #: _modules/dashboard/views/sidebar-upgrade.php:13
-msgid "Subscribe to the newsletter and receive updates on our WordPress Plugins"
+msgid ""
+"Subscribe to the newsletter and receive updates on our WordPress Plugins"
 msgstr ""
 
 #: _modules/dashboard/views/sidebar-donate.php:49
@@ -122,7 +132,9 @@ msgid "Site Wide Display Options"
 msgstr ""
 
 #: table-of-contents-generator.php:50
-msgid "Define site wide TOC settings for title, alignment, border, background color, font, font size and font color."
+msgid ""
+"Define site wide TOC settings for title, alignment, border, background "
+"color, font, font size and font color."
 msgstr ""
 
 #: table-of-contents-generator.php:51
@@ -130,7 +142,9 @@ msgid "Always Display TOC"
 msgstr ""
 
 #: table-of-contents-generator.php:51
-msgid "Choose to have the table of contents static in the top left or right corner of the Page or Post as the user scrolls down."
+msgid ""
+"Choose to have the table of contents static in the top left or right corner "
+"of the Page or Post as the user scrolls down."
 msgstr ""
 
 #: table-of-contents-generator.php:52
@@ -146,7 +160,9 @@ msgid "Exclude Headings from TOC"
 msgstr ""
 
 #: table-of-contents-generator.php:53
-msgid "Choose to exclude specific heading tags (H1, H2 etc) from the Table of Contents listings."
+msgid ""
+"Choose to exclude specific heading tags (H1, H2 etc) from the Table of "
+"Contents listings."
 msgstr ""
 
 #: table-of-contents-generator.php:54
@@ -157,7 +173,7 @@ msgstr ""
 msgid "Choose to display a Back to Top anchor below each heading."
 msgstr ""
 
-#: table-of-contents-generator.php:101
+#: table-of-contents-generator.php:92
 msgid "Settings Updated."
 msgstr ""
 
@@ -170,12 +186,14 @@ msgid "Table of Contents CSS"
 msgstr ""
 
 #: views/settings.php:32
-msgid "Enter your own custom CSS to style any table of content lists.  Structure is:"
+msgid ""
+"Enter your own custom CSS to style any table of content lists.  Structure is:"
 msgstr ""
 
 #: views/settings.php:42
 msgid "Save"
 msgstr ""
+
 #. Plugin Name of the plugin/theme
 msgid "Table of Contents Generator"
 msgstr ""
@@ -185,7 +203,9 @@ msgid "http://www.wpcube.co.uk/plugins/table-of-contents-generator-pro"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Generates an ordered list by scanning a Page's content's headings. Placed within a Page using [TOC]."
+msgid ""
+"Generates an ordered list by scanning a Page's content's headings. Placed "
+"within a Page using [TOC]."
 msgstr ""
 
 #. Author of the plugin/theme

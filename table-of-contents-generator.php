@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Table of Contents Generator
 * Plugin URI: http://www.wpcube.co.uk/plugins/table-of-contents-generator-pro
-* Version: 1.5.3
+* Version: 1.5.4
 * Author: WP Cube
 * Author URI: http://www.wpcube.co.uk
 * Description: Generates an ordered list by scanning a Page's content's headings. Placed within a Page using [TOC].
@@ -31,21 +31,23 @@
 * @package WP Cube
 * @subpackage Table of Contents Generator
 * @author Tim Carr
-* @version 1.5.3
+* @version 1.5.4
 * @copyright WP Cube
 */
 class TOCGenerator {
     /**
     * Constructor.
     */
-    function TOCGenerator() {
+    function __construct() {
+
         // Plugin Details
         $this->plugin = new stdClass;
-        $this->plugin->name = 'table-of-contents-generator'; // Plugin Folder
-        $this->plugin->displayName = 'Table of Contents Generator'; // Plugin Name
-        $this->plugin->version = '1.5.3';
-        $this->plugin->folder = WP_PLUGIN_DIR.'/'.$this->plugin->name; // Full Path to Plugin Folder
-        $this->plugin->url = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
+        $this->plugin->name         = 'table-of-contents-generator'; // Plugin Folder
+        $this->plugin->displayName  = 'Table of Contents Generator'; // Plugin Name
+        $this->plugin->version      = '1.5.4';
+        $this->plugin->folder       = plugin_dir_path( __FILE__ );
+        $this->plugin->url          = plugin_dir_url( __FILE__ );
+
         $this->plugin->upgradeReasons = array(
         	array(__('Site Wide Display Options'), __('Define site wide TOC settings for title, alignment, border, background color, font, font size and font color.')),
         	array(__('Always Display TOC'), __('Choose to have the table of contents static in the top left or right corner of the Page or Post as the user scrolls down.')),
